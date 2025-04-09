@@ -1,0 +1,90 @@
+---
+- summary: |
+    Товар не в наличии добавляется в корзину
+  environment: |
+    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    ОС Linux 22.04
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. В окне поиска написать "lemon"
+    3. Нажать кнопку "Add to cart" 3 раза
+    4. Проверить пополнение корзины
+  expected-result: |
+    При добавлении товара не в наличии в корзину
+    вылазит ошибка "Not in stocks"
+  actual-result: |
+    Товар добавляется в корзину в любом количестве
+
+- summary: |
+    Оформляется заказ товара, которого нет в наличии
+  environment: |
+    Google Chrome 107.0.5304.121 (Официальная сборка) (64 бит)
+    ОС Linux
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. В окне поиска написать "lemon"
+    3. Нажать кнопку "Add to cart" 3 раза
+    4. Нажать кнопку "Cart"
+    5. Нажать кнопку "Checkout"
+  expected-result: |
+    При заказе товара возникает ошибка
+    "Sorry, not in stocks"
+  actual-result: |
+    Заказ оформляется
+
+- summary: |
+    Успешный ввод недопостимых данных в поисковую строку (спецсимволов, только цифр)
+  environment: |
+    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    ОС Linux 22.04
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. В окне поиска написать "!;?87%;9"
+    3. Нажать Enter
+  expected-result: |
+    Возникает ошибка "Недопистимые символы, напишите пожалуйста название товара"
+  actual-result: |
+    Происходит поиск
+
+- summary: |
+    Изменение языка сбрасывается при перезагрузке страницы
+  environment: |
+    Google Chrome 107.0.5304.121 (Официальная сборка) (64 бит)
+    ОС Linux
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Нажать кнопку "Language"
+    3. Нажать кнопку "Russian"
+    4. Перезагрузить страницу
+  expected-result: |
+    Настройки языка сохраняются
+  actual-result: |
+    Язык меняется на английский
+
+- summary: |
+    Не отображается флаг рядом с языком при выборе языка
+  environment: |
+    Google Chrome   107.0.5304.121 (Официальная сборка) (64 бит)
+    ОС Linux 22.04
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Нажать кнопку "Language"
+  expected-result: |
+    Ниспадает список языков с картинками флагов
+  actual-result: |
+    Отсутствует флаг рядом с русским языком, вместо него пустой символ изображения
+
+- summary: |
+    В DevTools обращения производятся некорректно запрос-клиент-сервер при переходе между страницами магазина
+  environment: |
+    Google Chrome 107.0.5304.121 (Официальная сборка) (64 бит)
+    ОС Linux
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Открыть DevTools
+    3. Нажать кнопку "Next" 5 раз
+  expected-result: |
+    Наличие только запросов GET products?skip=
+    Без GET thumbnail.png (картинка товара) запросов
+  actual-result: |
+    Начиная с третьей страницы возникает много запросов GET thumbnail.png
