@@ -6,7 +6,6 @@
   prerequisites: |
     Открыта главная страница https://hexlet-products-store.vercel.app/
   test-data: |
-    
   steps:
     - Нажать кнопку "Add to cart"
     - Нажать кнопку "Cart"
@@ -20,7 +19,6 @@
   prerequisites:
     Открыта непустая корзина
   test-data: |
-    
   steps:
     - Нажать кнопку "Delete"
   expected-result: |
@@ -34,7 +32,6 @@
   prerequisites:
     Открыта непустая корзина
   test-data: |
-    
   steps:
     - Нажать кнопку "Checkout"
     - Нажать кнопку "Close"
@@ -48,7 +45,6 @@
   prerequisites:
     Открыта корзина
   test-data: |
-    
   steps:
     - Нажать кнопку "Continue shopping"
   expected-result: |
@@ -63,7 +59,6 @@
   prerequisites:
     Открыта непустая корзина
   test-data: |
-    
   steps:
     - Нажать кнопку "Continue shopping"
     - Нажать кнопку "Add to cart"
@@ -80,7 +75,6 @@
   prerequisites:
     Открыта непустая корзина
   test-data: |
-    
   steps:
     - Нажать кнопку "Continue shopping"
     - Нажать кнопку "Add to cart"
@@ -95,7 +89,6 @@
   prerequisites:
     Открыта главная страница https://hexlet-products-store.vercel.app/
   test-data: |
-    
   steps:
     - Нажать кнопку в окне "Essence" 
   expected-result: |
@@ -108,7 +101,6 @@
   prerequisites:
     Открыта главная страница https://hexlet-products-store.vercel.app/
   test-data: |
-    
   steps:
     - Нажать кнопку "Category"
     - Нажать на кнопку "beauty"
@@ -149,7 +141,6 @@
   prerequisites:
     Открыта главная страница https://hexlet-products-store.vercel.app/
   test-data: |
-    
   steps:
     - Сделать кнопку "In Stock" активной
   expected-result: |
@@ -163,7 +154,6 @@
     Открыта главная страница https://hexlet-products-store.vercel.app/
     Пустая корзина
   test-data: |
-    
   steps:
     - Нажать кнопку "Add to cart" столько раз, сколько товара в наличии + 1
   expected-result: |
@@ -177,7 +167,6 @@
     Открыта главная страница https://hexlet-products-store.vercel.app/
     Непустая корзина
   test-data: |
-    
   steps:
     - Нажать кнопку "Cart"
   expected-result: |
@@ -192,7 +181,6 @@
     Открыта главная страница https://hexlet-products-store.vercel.app/
     Непустая корзина
   test-data: |
-    
   steps:
     - Перезагрузить страницу
     - Нажать кнопку "Cart"
@@ -207,7 +195,6 @@
     Открыта главная страница https://hexlet-products-store.vercel.app/
     Непустая корзина
   test-data: |
-    
   steps:
     - Перезагрузить страницу
     - Нажать кнопку "Cart"
